@@ -6,13 +6,8 @@
   
   body {
     height: 100%;
-    width: 100%;
-    /* background: linear-gradient(
-      90deg,
-      rgba(65, 185, 131, 1) 0%,
-      rgba(0, 212, 255, 1) 100%
-    ); */
-    background-image: url("https://images.unsplash.com/photo-1617695615794-a5abcece0f48?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    width: 100%;    
+    background-image: url("assets/fundo.png");
     background-size: 1300px 700px;
     background-position-y: 10%;
   }
@@ -26,17 +21,18 @@
     color: white;
     border: none;
     border-radius: 5px;
-    background: rgba(255, 236, 236, 0.315);
+    background: rgba(255, 236, 236, 0.486);
     margin-left: 42%;    
   }
 
-  .titulo h1{
+  .textoJogador1{
     margin-top: 10px;
+    color: blue;
   }
 
-  .titulo h2{
+  .textoJogador2{
     margin-top: 10px;
-    
+    color: red;    
   }
 
   .configTabuleiro{
