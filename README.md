@@ -1,7 +1,10 @@
 # Jogo Da Velha Implementado Apenas Com HTML, CSS e JavaScript.
 
-  Funcionalidades das Jogadas e Verificações de Vitória e Empate Implementadas Separadas das Funcionalidades da Tela.
-  CSS Com Aplicação de Método Grid Para Criação do Tabuleiro e Também Método de Criação dos Objetos X e O.
-  Aplicação do Conceito de Herança Para Que as Funcionalidades Pudessem ser Executadas Estando em Arquivos Separados.
-  Ordem de Chamada dos Arquivos JavaScript no Arquivo HTML é Essencial Para Que os Métodos Implementados em Cada Arquivo Funcionem. Arquivos JavaScript são Executados Por Ordem   de Instância, ou seja, o Arquivo que Contém o Construtor Precisa ser Chamado Primeiro no Arquivo HTML e em Seguida o(s) Outro(s) Arquivo(s) Que Herdam Suas Propriedades e 
-  Métodos/Funções. Devem Ser Instanciados no Final da Tag BODY(Boas Práticas de Programação).
+  Funcionalidades das jogadas e verificações de vitória e empate implementadas separadas das funcionalidades da tela.
+  
+  CSS com aplicação de método grid para criação do tabuleiro e também método de criação dos objetos X e O.
+  
+  Aplicação do conceito de herança para que as funcionalidades pudessem ser executadas estando em arquivos separados.
+  
+  Ordem de chamada dos arquivos JavaScript no arquivo HTML é essencial para que os métodos implementados em cada arquivo funcionem. Arquivos JavaScript são executados por        ordem de instância, ou seja, o arquivo que contém o construtor precisa ser chamado primeiro no arquivo HTML e em seguida o(s) outro(s) arquivo(s) que herdam suas           
+  propriedades e métodos/funções. Devem ser instanciados no final da tag BODY(boas práticas de programação).
