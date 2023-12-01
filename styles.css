@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    /* background: linear-gradient(
+      90deg,
+      rgba(65, 185, 131, 1) 0%,
+      rgba(0, 212, 255, 1) 100%
+    ); */
+    background-image: url("https://images.unsplash.com/photo-1617695615794-a5abcece0f48?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 1300px 700px;
+    background-position-y: 10%;
+  }
+
+  .titulo{    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 236, 236, 0.315);
+    margin-left: 42%;    
+  }
+
+  .titulo h1{
+    margin-top: 10px;
+  }
+
+  .titulo h2{
+    margin-top: 10px;
+    
+  }
+
+  .configTabuleiro{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 6%;
+  }
+  
+  .tabuleiro {
+    width: 25%;
+    height: 50%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: url("assets/cursor2.cur"), auto;
+  }
+
+  /*Efeito Hover Para X e O Antes de Selecionar Célula*/
+  .tabuleiro.x .celula:not(.x):not(.circle):hover::after,
+  .tabuleiro.x .celula:not(.x):not(.circle):hover::before,
+  .tabuleiro.circle .celula:not(.x):not(.circle):hover::after,
+  .tabuleiro.x .celula:not(.x):not(.circle):hover::before {
+    background: rgba(255, 255, 255, 0.3) !important;
+  }
+    
+  .celula {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .celula.x,
+  .celula.circle {
+    cursor: not-allowed;
+  }
+  
+  /*Removendo Borda Superior*/
+  .celula:nth-child(1),
+  .celula:nth-child(2),
+  .celula:nth-child(3) {
+    border-top: none;
+  }
+  
+  /*Removedo Borda Esquerda*/
+  .celula:nth-child(1),
+  .celula:nth-child(4),
+  .celula:nth-child(7) {
+    border-left: none;
+  }
+  
+  /*Removendo Borda Inferior*/
+  .celula:nth-child(7),
+  .celula:nth-child(8),
+  .celula:nth-child(9) {
+    border-bottom: none;
+  }
+  
+  /*Removendo Borda Direita*/
+  .celula:nth-child(3),
+  .celula:nth-child(6),
+  .celula:nth-child(9) {
+    border-right: none;
+  }
+  
+  /* Criação do X */
+  .celula.x::before,
+  .celula.x::after,
+  .tabuleiro.x .celula:not(.x):not(.circle):hover::after,
+  .tabuleiro.x .celula:not(.x):not(.circle):hover::before {
+    content: "";
+    height: calc(100px * 0.15);
+    width: calc(100px * 0.9);
+    background: blue;
+    position: absolute;
+  }
+  
+  .celula.x::before,
+  .tabuleiro.x .celula:not(.x):not(.circle):hover::before {
+    transform: rotate(45deg);
+  }
+  
+  .celula.x::after,
+  .tabuleiro.x .celula:not(.x):not(.circle):hover::after {
+    transform: rotate(-45deg);
+  }
+  
+  /* Criação do Circulo */
+  .celula.circle::before,
+  .celula.circle::after,
+  .tabuleiro.circle .celula:not(.x):not(.circle):hover::after,
+  .tabuleiro.circle .celula:not(.x):not(.circle):hover::after {
+    content: "";
+    height: calc(100px * 0.9);
+    width: calc(100px * 0.9);
+    background: red;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  /* Mensagem de Vitória */
+  .mensagemVitoria {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+
+  }
+  
+  .botaoReiniciar {
+    font-size: 2.5rem;
+    background-image: url("https://images.unsplash.com/photo-1617695615794-a5abcece0f48?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 500px 500px;
+    background-position-y: 35%;
+    background-position-x: 40%;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 16px;
+    color: white;
+    cursor: url("assets/cursor2.cur"), auto;
+  }
+  
+  .botaoReiniciar:hover {
+    color: red;
+    background-color: white;
+  }
+  
+  .textoMensagemVitoria {
+    color: white;
+    font-size: 5rem;
+  }
+  
+  .mostrarMensagemVitoria {
+    display: flex;
+  }
