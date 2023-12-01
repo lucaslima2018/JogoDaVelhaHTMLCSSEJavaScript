@@ -51,8 +51,6 @@
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, auto);
-    border: none;
-    border-radius: 10px;
     background-color: transparent;
     cursor: url("assets/cursor2.cur"), auto;
   }
