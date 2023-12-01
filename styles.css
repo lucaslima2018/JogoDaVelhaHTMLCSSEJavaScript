@@ -10,6 +10,7 @@
     background-image: url("assets/fundo.png");
     background-size: 1300px 700px;
     background-position-y: 10%;
+    cursor: url("assets/cursor1.cur"), auto;
   }
 
   .titulo{    
